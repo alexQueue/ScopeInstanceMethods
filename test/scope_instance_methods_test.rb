@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class ScopeInstanceMethodsTest < ActiveSupport::TestCase
-  test "truth" do
-    assert_kind_of Module, ScopeInstanceMethods
+  def test_responds_properly
+    instance = TestModel.new
+    assert_equal false, instance.active?
   end
 end
